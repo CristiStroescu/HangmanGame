@@ -1,0 +1,35 @@
+.stickman{
+    text-align: center;
+    margin: 20px;
+    font-size: 90px;
+    color: white;
+    p {
+        margin: 0;
+        padding: 0;
+      }
+}
+
+.stats{
+    font-size: 100px;
+    text-align: center;
+}
+
+.text{
+    font-size: 30px;
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.changeColor{
+    color: black;
+}
+
+.wrong-letters{
+    font-size: 20px;
+    text-align: center;
+}

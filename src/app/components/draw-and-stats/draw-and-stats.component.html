@@ -1,0 +1,21 @@
+<div class="wrapper">
+    <div class="stats">
+        <p class="text">Incorrect guesses:</p>
+        {{incorrectGuesses}}
+    </div>
+    <div class="stickman">
+        <p class="head" [ngClass]="{changeColor: incorrectGuesses >= 1}">0</p>
+        <p><span class="left-hand" [ngClass]="{changeColor: incorrectGuesses >= 2}">/</span><span class="body" [ngClass]="{changeColor: incorrectGuesses >= 3}">|</span><span class="right-hand" [ngClass]="{changeColor: incorrectGuesses >= 4}">\</span></p>
+        <p><span class="left-foot" [ngClass]="{changeColor: incorrectGuesses >= 5}">/</span><span class="right-foot" [ngClass]="{changeColor: incorrectGuesses >= 6}">\</span></p>
+    </div>
+    <div class="stats">
+        <p class="text">Remaining wrong guesses:</p>
+        {{remainingGuesses}}
+    </div>
+</div>
+<div class="wrong-letters" *ngIf="wrongLetters.length !=0">
+    <p>Wrong letters:</p>
+    <span *ngFor="let letter of wrongLetters">{{letter}} </span>
+</div>
+
+

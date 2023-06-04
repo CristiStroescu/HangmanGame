@@ -1,0 +1,11 @@
+
+<div class="result">
+    <p class="message" *ngIf="number==6">You lost! The answer is: {{wordToBeGuessed}}</p>
+    <p class="message" *ngIf="gameWon==true">You won!</p>
+</div>
+
+<div class="guess-the-word">
+    <p>{{wordHidden}}</p>
+    <input [(ngModel)]="letterGuessed" placeholder="Guess a letter">
+    <button [disabled]="number >= 6 || gameWon==true" (click)="takeAGuess()">Guess</button>
+</div>
